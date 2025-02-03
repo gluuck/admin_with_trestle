@@ -1,0 +1,4 @@
+.row
+  .div class='col-sm-12 col-md-6 section mt-1 image-fluid'
+    p Фото
+    = image_tag(main_app.url_for product.image) if product&.image&.present?

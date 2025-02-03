@@ -1,0 +1,4 @@
+<% @products.each do |product| %>
+  <%= product.title %><br>
+  <%= image_tag product.image.variant(resize_to_fit: [300, 300]) %><br>
+<% end %>
