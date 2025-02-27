@@ -151,7 +151,12 @@ Trestle.configure do |config|
   # authenticate an administrator. Defaults to :email.
   #
   # config.auth.authenticate_with = :login
-
+  config.hook(:javascripts) do
+    javascript_include_tag "trix", 'data-turbo-track': "reload"
+  end
+  config.hook(:stylesheets) do
+    stylesheet_link_tag "actiontext", media: "all"
+  end
   # Customize the method for authenticating a user given login parameters.
   # The block should return an instance of the auth user class, or nil.
   #

@@ -31,6 +31,7 @@ Trestle.resource(:products, model: Product) do
       end
       col(xs: 3) { file_field :image, label: "Загрузить Фото" }
     end
+    rich_text_area :description
     render "home/image", product:
   end
 end
